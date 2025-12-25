@@ -1,16 +1,8 @@
-# gdgbpx_auto
-## 添加了广东普法自动挂学分（学习网址：http://xfks-study.gdsf.gov.cn/）
-- 代码在根目录：gdpf_auto.py，将手机号码改了启动
-## 广东省干部培训网络学院自动挂视频学分脚本
+## 广东省GB培训网络学院自动挂视频学分脚本
 
-### 20211208 Fork @zww7821270 代码，调试修改了一下，暂时能用
-windows下有点需要注意的，我的chrome 64位，把驱动放在chrome下会提示找不到驱动，后面我把驱动放在python安装目录下解决。
-
-### 网站改版，代码已经不可用，只能做参考
-根据最近几天大家的反馈，我上去查看核实了网站，确实改版了，代码还是老版的自动查看，目前已经无法自动学习视频学分，暂时没空进行改版，sorry（2021-07-07）
 
 ### 前言
-最近在帮人挂广东省干部培训网络学院这个网站的视频，参考了一下网上别人的代码，自己也弄了一套，语言 **python**,需要python环境；
+Fork @zww7821270 代码，挂广东省GB培训网络学院视频。 网站改版了，无法自动学习视频学分，闲着改了下，能用了（2025-12-24）
 
 ### 使用说明
 1. 拉代码，python环境建议直接安装anaconda然后配置环境变量，然后直接下载pycharm开发工具，打开代码后，提示什么包下面有红色波浪线要import，就import；import失败就打开settings-Python Interpreter-install(+号)手动引入
@@ -18,7 +10,7 @@ windows下有点需要注意的，我的chrome 64位，把驱动放在chrome下�
    ![image-20201112092256978](./images/image-20201112092256978.png)
 
 2. 需要下载你当前电脑chrome谷歌浏览器对应版本的驱动，可查看当前浏览器，在网址http://npm.taobao.org/mirrors/chromedriver/  下载对应的驱动
-    将下载好的驱动解压到对应chrome的安装目录路径，windows放在C:\Program Files (x86)\Google\Chrome\Application下，mac放在/usr/local/bin/下
+    将下载好的驱动解压到对应chrome的安装目录路径，windows放在C:\Program Files (x86)\Google\Chrome\Application下（若提示无法找到驱动，需要把驱动放入Python安装目录），mac放在/usr/local/bin/下
 
 3. 修改代码中用户名密码，在pycharm运行
 ```

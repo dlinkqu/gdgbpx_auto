@@ -106,12 +106,16 @@ def main():
     # 窗口最大化
     browser.maximize_window()
     #elem = browser.find_element(By.XPATH, '//*[@id="pnlLogin"]/div[1]/div[2]')
-    elem = browser.find_element(By.XPATH,'//*[@id="pnlLogin"]/div[1]/div[2]')
+    elem = browser.find_element(By.XPATH, '//*[@id="header_right_box"]/div[1]/div[2]')
     elem.click()
     time.sleep(1)
-    elems = browser.find_element(By.CLASS_NAME,"nav-items")
+    #elems = browser.find_element(By.CLASS_NAME,"nav-items")
+    elems = browser.find_element(By.CLASS_NAME,"no_login_btn")
     elems.click();
     #elems[0].click();
+    # switch wx/pass tab
+    password_login = browser.find_element(By.XPATH, "//span[@onclick=\"changeTab('user',this)\"]")
+    password_login.click()
     time.sleep(1)
     elem = browser.find_element(By.ID,"txtLoginName")
     elem.clear()
@@ -126,7 +130,15 @@ def main():
     elem = browser.find_element(By.ID,"txtValid")
     elem.clear()
     elem.send_keys(code_num)
-    elem = browser.find_element(By.XPATH,'//*[@id="user-login-form"]/div[2]/input[1]')
+    #elem = browser.find_element(By.XPATH,'//*[@id="user-login-form"]/div[2]/input[1]')
+    #elem.click()
+    time.sleep(1)
+    # Agree 
+    elem = browser.find_element(By.ID, 'cbAgree') 
+    elem.click() 
+    time.sleep(3)
+    # login click
+    elem = browser.find_element(By.CLASS_NAME,"btnLogin")
     elem.click()
     time.sleep(3)
     #elems = browser.find_element(By.CLASS_NAME,"is-round");
@@ -135,7 +147,9 @@ def main():
     print("5555……")
     #elems[0].click();
     time.sleep(3)
-    elem = browser.find_element(By.ID,'btnStudy')
+    # enter study list
+    #elem = browser.find_element(By.ID,'btnStudy')
+    elem = browser.find_element(By.CLASS_NAME,'header_more')
     elem.click()
     time.sleep(3)
     print("6666……")
